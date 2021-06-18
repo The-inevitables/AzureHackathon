@@ -446,7 +446,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-right footer-links d-none d-md-block">
-                                © 2021 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.
+                              <center>  © 2021 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</center>
                                 <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
                                 <a href="javascript: void(0);">Contact Us</a>
