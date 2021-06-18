@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="assets/js/weavysdk.js" id="weavy-client-script"></script>
-      <script>var weavy = new Weavy();</script>
+      
+<!-- <script src="assets/js/weavysdk.js" id="weavy-client-script"></script>
+      <script>var weavy = new Weavy();</script> -->
 <head>
     <meta charset="utf-8" />
     <title>Dashboard</title>
@@ -21,12 +22,12 @@
     <!-- App css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="main-style-container" />
-    <link href="assets/css/weavy.css" rel="stylesheet" type="text/css" />
-    <script src="https://demo.weavycloud.com/javascript/weavy.jquery.js"></script>
+<!--     <link href="assets/css/weavy.css" rel="stylesheet" type="text/css" /> -->
+<!--     <script src="https://demo.weavycloud.com/javascript/weavy.jquery.js"></script>
     <script>
     var sub = "e9ed3cc3-3785-6f2b-2f73-c262967fb880";
     var weavy = new Weavy({ jwt: sub });
-    </script>
+    </script> -->
 </head>
 
 <body class="loading">
@@ -406,16 +407,16 @@
 
                     </div>
                     <!-- end row -->
-                   <script>
+<!--                    <script>
                    weavy.space({ key: "e9ed3cc3-3785-6f2b-2f73-c262967fb880" }).app({ key: "af", type: "posts", container: "#feed" });
-                   </script>
+                   </script> -->
                    <div class="row">
                         <div class="col-lg-8">
                             <div class="card section-customer" data-customer-id="acme">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Upload Prescription</h4>
+                                    <h4 class="header-title mb-3">Information Hub</h4>
 
-                                    <div id="weavy-files-container"></div>
+<!--                                     <div id="weavy-files-container"></div> -->
 
                                 </div>
                             </div>
@@ -445,6 +446,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-right footer-links d-none d-md-block">
+                                <p>© 2021 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</p>
                                 <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
                                 <a href="javascript: void(0);">Contact Us</a>
@@ -477,13 +479,13 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!-- TASK: add weavy javascript library here -->
-    <script src="assets/js/weavy.js" id="weavy-client-script"></script>
+<!--     <!-- TASK: add weavy javascript library here -->
+<!--     <script src="assets/js/weavy.js" id="weavy-client-script"></script> --> -->
 
-    <!-- weavy client script -->
-    <script src="assets/js/weavysdk.js"></script>
-    <script>var weavy = new Weavy();</script>
-
+<!--     <!-- weavy client script -->
+<!--     <script src="assets/js/weavysdk.js"></script>
+    <script>var weavy = new Weavy();</script> -->
+ -->
     <!-- third party js -->
     <script src="assets/js/vendor/jsrsasign-all-min.js"></script>
     <script src="assets/js/vendor/Chart.bundle.min.js"></script>
