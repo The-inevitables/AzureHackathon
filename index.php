@@ -155,7 +155,7 @@
                <div class="col-md-6">
                   <div class="message-box">
                      <h4>What We Do</h4>
-                     <h2>Medical Service At The Best Near You!</h2>
+                     <h2> The Best Medical Service Near You!</h2>
                      <p class="lead">What makes our communities better makes us all better.  </p>
                      <p>  We have an enduring commitment to a healthier society, and partner with organizations that share our vision. </p>
                      <p>Getting an accurate diagnosis can be one of the most impactful experiences that you can have — especially if you've been in search of that answer for a while. We can help you get there.
@@ -310,7 +310,7 @@
                     <div class="widget clearfix">
                         <img src="images/alp.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>Govt. MCH Alapuzha</h3>
+                            <h3>Govt. MCH Alappuzha</h3>
                             
                         </div>
                         <!-- end title -->
@@ -424,7 +424,7 @@
          <div class="container">
             <div class="heading">
                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-               <h2>Get in Touch</h2>
+               <h2> Your feedback is valuable to us</h2>
 		    <h4> We would love to hear from you!</h4>
             </div>
          </div>
@@ -516,7 +516,7 @@
             <div class="row">
                <div class="col-md-8">
                   <div class="footer-text">
-                     <p>© 2020 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</p>
+                     <p>© 2021 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</p>
                   </div>
                </div>
                <div class="col-md-4">
