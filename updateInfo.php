@@ -58,7 +58,7 @@
                </div>
             </div>
          </div>
-         <div class="header-bottom wow fadeIn">
+         <!-- <div class="header-bottom wow fadeIn">
             <div class="container">
                <nav class="main-menu">
                   <div class="navbar-header">
@@ -75,7 +75,7 @@
                </nav>
               
             </div>
-         </div>
+         </div> -->
       
       
       <div id="service" class="services wow fadeIn">
@@ -232,6 +232,7 @@
          </div>
       </div>
       <!-- end section -->
+      
 	  
 	
       <!-- end copyrights -->
