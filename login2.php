@@ -94,7 +94,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <input type="number" id="name" name="userID" placeholder="User_ID"  />
+                                       <input type="text" id="name" name="name" placeholder="Name"  />
                                        
                                     </div>
                                  </div>
@@ -103,7 +103,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <input type="date" id="name" name="date" placeholder="date"  />
+                                       <input type="number" id="phone" name="date" placeholder="phone"  />
                                        
                                     </div>
                                  </div>
