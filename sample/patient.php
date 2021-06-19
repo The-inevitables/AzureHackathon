@@ -48,34 +48,43 @@
                                 <li>
                                     
                                     <a href="../index.php">
-                                    <i class="dripicons-meter"></i>Home</a>
+                                    <i class="dripicons-meter"></i><span>Home</span></a>
                                 </li>
                             </ul>
                             <ul class="side-nav-second-level mm-show" aria-expanded="false">
                                 <li>
                                     
                                     <a href="../updateInfo.php">
-                                    <i class="dripicons-meter"></i>Update Patient Info</a>
+                                    <i class="dripicons-meter"></i>
+                                    <span>Update Patient Info</span></a>
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
-                                    <i class="dripicons-meter"></i>Book an appointment</a><!--- Link not updated -->
+                                    <i class="dripicons-meter"></i>
+                                    <span>Book an appointment</span>
+                                </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
-                                    <i class="dripicons-meter"></i>Volunteer Registration</a><!--- Link not updated -->
+                                    <i class="dripicons-meter"></i>
+                                    <span>Volunteer Registration</span>
+                                </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
-                                    <i class="dripicons-meter"></i>Feedback System</a><!--- Link not updated -->
+                                    <i class="dripicons-meter"></i>
+                                    <span>Feedback System</span>
+                                </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
-                                    <i class="dripicons-meter"></i>Emergency Assistance</a><!--- Link not updated -->
+                                    <i class="dripicons-meter"></i>
+                                    <span>Emergency Assistance</span>
+                                </a><!--- Link not updated -->
                                 </li>
                             </ul>
                         </li>
