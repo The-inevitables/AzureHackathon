@@ -37,7 +37,7 @@
                     <!--- Sidemenu -->
                     <ul class="metismenu side-nav pt-4">
 
-                        <li class="side-nav-title side-nav-item">Navigation</li>
+                        <li class="side-nav-title side-nav-item">Navigation Panel</li>
 
                         <li class="side-nav-item mm-open">
                             <a href="javascript: void(0);" class="side-nav-link">
@@ -46,15 +46,30 @@
                             </a>
                             <ul class="side-nav-second-level mm-show" aria-expanded="false">
                                 <li>
+                                    <i class="dripicons-meter"></i>
                                     <a href="../index.php">Home</a>
                                 </li>
                             </ul>
                             <ul class="side-nav-second-level mm-show" aria-expanded="false">
                                 <li>
+                                    <i class="dripicons-meter"></i>
                                     <a href="../updateInfo.php">Update Patient Info</a>
                                 </li>
                                 <li>
-                                    <a href="../updateInfo.php">Volunteer Registration</a>
+                                    <i class="dripicons-meter"></i>
+                                    <a href="../updateInfo.php">Book an appointment</a><!--- Link not updated -->
+                                </li>
+                                <li>
+                                    <i class="dripicons-meter"></i>
+                                    <a href="../updateInfo.php">Volunteer Registration</a><!--- Link not updated -->
+                                </li>
+                                <li>
+                                    <i class="dripicons-meter"></i>
+                                    <a href="../updateInfo.php">Feedback System</a><!--- Link not updated -->
+                                </li>
+                                <li>
+                                    <i class="dripicons-meter"></i>
+                                    <a href="../updateInfo.php">Emergency Assistance</a><!--- Link not updated -->
                                 </li>
                             </ul>
                         </li>
@@ -134,11 +149,7 @@
                                     <i class="dripicons-message noti-icon"></i>
                                 </button>
                                     <!-- Containter for messenger -->
-                                <div id="weavy-messenger-container">                                
-    
-                                   
-                                </div>
-                            </li>
+                             </li>
                             
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown"
@@ -213,7 +224,7 @@
                                         <li class="breadcrumb-item active">Patient Description</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Patient Details</h4>
+                                <h4 class="page-title">My Details</h4>
                             </div>
                         </div>
                     </div>
@@ -224,7 +235,7 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Patient Details Updated</h4>
+                                    <h4 class="header-title mb-3">My full details</h4>
                                     <address class="mb-0 font-14 address-lg">
                                         <h4>
                                         <?php
@@ -250,7 +261,7 @@
 
                                             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 
-                                                echo 'Name:'.$row['fname'].' '.$row['lname']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Age:'.$row['age']."<br /><br />".'Address:'.$row['address']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
+                                                echo 'Name : '.$row['fname'].' '.$row['lname']."<br /><br />".'Phone : '.$row['phone']."<br /><br />".'Age : '.$row['age']."<br /><br />".'Address : '.$row['address']."<br /><br />".'Hospital selected : '.$row['hospital']."<br /><br />";
                                             }
 
                                             sqlsrv_free_stmt( $stmt);
@@ -275,15 +286,14 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Initial Information</h4>
+                                    <h4 class="header-title mb-3">Hospital Information</h4>
 
                                     <ul class="list-unstyled mb-0">
                                         <li>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Information: Chest Pain</span>
+                                            <p class="mb-2"><span class="font-weight-bold mr-2">Department List</span>
                                                </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Diagonostic: CPR, Injection and move the patient to observation room.</span> </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Initial Test done: ECG, Blood Pressure, Prescribed for lab test.</span>
-                                              </p>
+                                            <p class="mb-2"><span class="font-weight-bold mr-2">Doctor List</span> </p>
+                                            
                                             
                                         </li>
                                     </ul>
