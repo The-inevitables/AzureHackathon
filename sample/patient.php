@@ -221,9 +221,9 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Initial information</h4>
+                                    <h4 class="header-title mb-3">Patient Details Updated</h4>
                                     <address class="mb-0 font-14 address-lg">
-                                        <h3>
+                                        <h4>
                                         <?php
 
                                             try {
@@ -239,25 +239,26 @@
                                             $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
                                             $serverName = "tcp:lifelineserver.database.windows.net,1433";
                                             $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select name from reserve where id= (select max(id) as id from reserve)";
+                                            $sql = "select fname,lname,phone,age,address,hospital from patientInfo where id= (select max(id) as id from patientInfo)";
                                             $stmt = sqlsrv_query( $conn, $sql );
                                             if( $stmt === false) {
                                                 die( print_r( sqlsrv_errors(), true) );
                                             }
 
                                             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-                                                echo $row['name']."<br />";
+
+                                                echo 'Name:'.$row['fname'].$row['lname']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Age:'.$row['age']."<br /><br />".'Address:'.$row['address']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
                                             }
 
                                             sqlsrv_free_stmt( $stmt);
 
                                             ?>
-                                        </h3>
+                                        </h4>
 
 
-                                        <br>Information: Chest Pain</br>
+                                        <!-- <br>Information: Chest Pain</br>
                                         <br>Diagonostic: CPR, Injection and move the patient to observation room.</br>
-                                        <br>Initial Test done: ECG, Blood Pressure, Prescribed for lab test.</br>
+                                        <br>Initial Test done: ECG, Blood Pressure, Prescribed for lab test.</br> -->
                                 
                                     </address>
 
@@ -268,6 +269,25 @@
                         </div>
                         <!-- end col -->
 
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-3">Initial Information</h4>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <p class="mb-2"><span class="font-weight-bold mr-2">Information: Chest Pain</span>
+                                               </p>
+                                            <p class="mb-2"><span class="font-weight-bold mr-2">Diagonostic: CPR, Injection and move the patient to observation room.</span> </p>
+                                            <p class="mb-2"><span class="font-weight-bold mr-2">Initial Test done: ECG, Blood Pressure, Prescribed for lab test.</span>
+                                              </p>
+                                            
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
@@ -326,19 +346,19 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Grand Total :</td>
-                                                    <td>Rs 1641</td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Lab Expense :</td>
-                                                    <td>Rs 23</td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Farmacy expense : </td>
-                                                    <td>Rs 19.22</td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Total :</th>
-                                                    <th>Rs 1683.22</th>
+                                                    <th></th>
                                                 </tr>
                                             </tbody>
                                         </table>
