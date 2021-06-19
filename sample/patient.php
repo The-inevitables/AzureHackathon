@@ -151,8 +151,9 @@
                             </li>
 
                             <li class="notification-list topbar-dropdown d-lg-block toggle-messenger">
+                                <!-- Connecting with azure health bot -->
                                 <button class="nav-link dropdown-toggle arrow-none btn btn-link">
-                                    <i class="dripicons-message noti-icon"></i>
+                                  <a href="cPzdsTjhnVM.sZ8SN5tZB8YhbaSeuF1Y1E-NBj91Cj7Zo_B0tmGPSYs">  <i class="dripicons-message noti-icon"></i></a>
                                 </button>
                                     <!-- Containter for messenger -->
                              </li>
