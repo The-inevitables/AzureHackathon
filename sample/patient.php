@@ -53,6 +53,9 @@
                                 <li>
                                     <a href="../updateInfo.php">Update Patient Info</a>
                                 </li>
+                                <li>
+                                    <a href="../updateInfo.php">Volunteer Registration</a>
+                                </li>
                             </ul>
                         </li>
 
