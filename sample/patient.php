@@ -48,7 +48,7 @@
                                 <li>
                                     
                                     <a href="../index.php">
-                                    <i class="dripicons-meter"></i><span>Home</span></a>
+                                    <i class="dripicons-meter"></i><span> Home </span></a>
                                 </li>
                             </ul>
                             <ul class="side-nav-second-level mm-show" aria-expanded="false">
@@ -56,34 +56,34 @@
                                     
                                     <a href="../updateInfo.php">
                                     <i class="dripicons-meter"></i>
-                                    <span>Update Patient Info</span></a>
+                                    <span> Update Patient Info </span></a>
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
                                     <i class="dripicons-meter"></i>
-                                    <span>Book an appointment</span>
+                                    <span> Book an appointment </span>
                                 </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
                                     <i class="dripicons-meter"></i>
-                                    <span>Volunteer Registration</span>
+                                    <span> Volunteer Registration </span>
                                 </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
                                     <i class="dripicons-meter"></i>
-                                    <span>Feedback System</span>
+                                    <span> Feedback System </span>
                                 </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
                                     <i class="dripicons-meter"></i>
-                                    <span>Emergency Assistance</span>
+                                    <span> Emergency Assistance </span>
                                 </a><!--- Link not updated -->
                                 </li>
                             </ul>
@@ -446,7 +446,7 @@
     <div class="rightbar-overlay"></div>
     <!-- /Right-bar -->
 
-    <!-- Containter for Weavy Messenger -->
+<!--     <!-- Containter for Weavy Messenger -->
     <div id="weavy-messenger-container"></div>
 
     <!-- App js -->
@@ -456,7 +456,7 @@
     <script src="https://{your-weavy-url}/javascript/weavy.jquery.js" id="weavy-client-script"></script>
 
     <!-- weavy client script -->
-    <script src="assets/js/weavy.js"></script>
+    <script src="assets/js/weavy.js"></script> -->
 
     <!-- third party js -->
     <script src="assets/js/vendor/jsrsasign-all-min.js"></script>
