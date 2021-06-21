@@ -67,14 +67,14 @@
                                 </li>
                                 <li>
                                     
-                                    <a href="../updateInfo.php">
+                                    <a href="./volunteer.php">
                                     <i class="dripicons-meter"></i>
                                     <span> Volunteer Registration </span>
                                 </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
-                                    <a href="../updateInfo.php">
+                                    <a href="../feedback.php">
                                     <i class="dripicons-meter"></i>
                                     <span> Feedback System </span>
                                 </a><!--- Link not updated -->
