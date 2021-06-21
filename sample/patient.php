@@ -175,8 +175,36 @@
                                             class="rounded-circle">
                                     </span>
                                     <span>
-                                        <span class="account-user-name">Patient</span>
-                                        <span class="account-position">1001</span>
+                                        <span class="account-user-name">
+                                            <?php
+
+                                            try {
+                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
+                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                            }
+                                            catch (PDOException $e) {
+                                                print("Error connecting to SQL Server.");
+                                                die(print_r($e));
+                                            }
+
+                                            // SQL Server Extension Sample Code:
+                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
+                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
+                                            $sql = "select name,phone from register where id= (select max(id) as id from register)";
+                                            $stmt = sqlsrv_query( $conn, $sql );
+                                            if( $stmt === false) {
+                                                die( print_r( sqlsrv_errors(), true) );
+                                            }
+
+                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+
+                                                echo $row['name']."<br />".$row['phone']."<br />";
+                                            }
+
+                                            sqlsrv_free_stmt( $stmt);
+
+                                            ?>
                                     </span>
                                 </a>
                                 <div
