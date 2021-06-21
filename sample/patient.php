@@ -254,7 +254,7 @@
                                     <h4 class="header-title mb-3">My full details</h4>
                                     <address class="mb-0 font-14 address-lg">
                                         <h4>
-                                        <?php
+                                                                                <?php
 
                                             try {
                                                 $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
@@ -269,7 +269,7 @@
                                             $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
                                             $serverName = "tcp:lifelineserver.database.windows.net,1433";
                                             $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select fname,lname,phone,age,address,hospital from patientInfo where id= (select max(id) as id from patientInfo)";
+                                            $sql = "select name,phone,age,address,hospital from register where id= (select max(id) as id from register)";
                                             $stmt = sqlsrv_query( $conn, $sql );
                                             if( $stmt === false) {
                                                 die( print_r( sqlsrv_errors(), true) );
@@ -277,7 +277,7 @@
 
                                             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 
-                                                echo 'Name : '.$row['fname'].' '.$row['lname']."<br /><br />".'Phone : '.$row['phone']."<br /><br />".'Age : '.$row['age']."<br /><br />".'Address : '.$row['address']."<br /><br />".'Hospital selected : '.$row['hospital']."<br /><br />";
+                                                echo 'Name:'.$row['name']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Age:'.$row['age']."<br /><br />".'Address:'.$row['address']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
                                             }
 
                                             sqlsrv_free_stmt( $stmt);
