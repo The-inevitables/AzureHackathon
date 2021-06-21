@@ -290,7 +290,7 @@
                                     <address class="mb-0 font-14 address-lg">
                                     <div>
                                     <h3>                                   
-                                    <?php
+                                                                        <?php
 
                                             try {
                                                 $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
