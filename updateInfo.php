@@ -118,44 +118,70 @@
                                     </div>
                                  </div>
                               </div>
-
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                        <label><br />Date of Admission</label>
-                                       <input type="date" id="day"  name="day" placeholder="Date of Admission"  />
-
-                                    </div>
-                                 </div>
-                              </div>
+                           
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
                                  <div class="row">
                                  
                                     <div class="form-group">
-                                    <label><br />Hospital</label>
-                                       <select class="form-control" name="hospital">
-                                          <option>Govt Medical college Alapuzha</option>
-                                          <option>Mary queens Hospital Kanjirappally</option>
-                                          <option>Mar sleeva medicity Cherpunkal</option>
-                                          <option>Pushpagiri medical college Thiruvalla</option>
-                                          <option>Govt GH Kanjirappally</option>
-                                          <option>Govt Medical college Kottayam</option>
-                                          
+                                    <!-- <label><br />State</label> -->
+                                       <select data-target="secondList" class="firstList selectFilter" name="state">
+                                       <option value="-1">State</option>
+                                       <option data-ref="one" >Andra Pradesh</option>
+                                       <option data-ref="two" >Delhi</option>
+                                       <option data-ref="three">Karnataka</option>
+                                       <option data-ref="four">Kerala</option>
+                                       <option data-ref="five">Punjab</option>
+                                       <option data-ref="six">Tamil Nadu</option>
+                                       </select>
+                                       <!-- <label><br />District</label> -->
+                                       <select data-target="thirdList" class="secondList selectFilter" name="district">
+                                       <option value="-1">District</option>
+                                       <option data-ref="A" data-belong="four" >Alapuzha</option>
+                                       <option data-ref="B" data-belong="four">Eranakulam</option>
+                                       <option data-ref="C" data-belong="four">Idukki</option>
+                                       <option data-ref="D" data-belong="four">Kannur</option>
+                                       <option data-ref="E" data-belong="four">Kasaragod</option>
+                                       <option data-ref="F" data-belong="four">Kottayam</option>
+                                       <option data-ref="G" data-belong="four">Kollam</option>
+                                       <option data-ref="H" data-belong="four">Kozhikode</option>
+                                       <option data-ref="I" data-belong="four">Malappuram</option>
+                                       <option data-ref="J" data-belong="four">Palakkad</option>
+                                       <option data-ref="K" data-belong="four">Pathanamthitta</option>
+                                       <option data-ref="L" data-belong="four">Trivandrum</option>
+                                       <option data-ref="M" data-belong="four">Thrissur</option>
+                                       <option data-ref="N" data-belong="four">Wayanad</option>
+                                       
+                                       
+                                    </select>
+                                    <!-- <label><br />Hospital</label> -->
+                                       <select  class="thirdList selectFilter" name="hospital">
+                                       <option value="-1">Hospitals</option>
+                                          <option data-belong="A">Government Medical college Alapuzha</option>
+                                          <option data-belong="B">Government Medical college Eranakulam</option>
+                                          <option data-belong="C">Government Medical college Idukki</option>
+                                          <option data-belong="D">Government Medical college Kannur</option>
+                                          <option data-belong="E">Government Medical college Kasaragod</option>
+                                          <option data-belong="F">Government Medical college Kottayam</option>
+                                          <option data-belong="G">Government Medical college Kollam</option>
+                                          <option data-belong="H">Government Medical college Kozhikode</option>
+                                          <option data-belong="I">Government Medical college Malappuram</option>
+                                          <option data-belong="J">Government Medical college Palakkad</option>
+                                          <option data-belong="K">Government Medical college Pathanamthitta</option>
+                                          <option data-belong="L">Government Medical college trivandrum</option>
+                                          <option data-belong="M">Government Medical college Thrissur</option>
+                                          <option data-belong="N">Government Medical college Wayanad</option>
+                                          <option data-belong="F">Pushpagiri Medical college Hospital Thiruvalla</option>   
+                                          <option data-belong="F">Mar sleeva Medi city Pala</option> 
+                                          <option data-belong="F">Maryqueens Hospital Kanjirappally </option>  
+                                          <option data-belong="B">Apollo Adlux Hospital Angamaly</option> 
+                                          <option data-belong="B">VPS Lakeshore Hospital Kochi</option>                                  
+                                        
                                        
                                        </select>
                                     </div>
                                  </div>
                               </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="text" id="location" name="location" placeholder="Hospital Location"  />
-                                       
-                                    </div>
-                                 </div>
-                              </div>
-
-                              
+                                                        
                               
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
@@ -243,6 +269,9 @@
       <!-- all plugins -->
       <script src="js/custom.js"></script>
       <!-- map -->
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script> -->
+      <!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+      <script src="js/selectFilter.min.js"></script>
+   
    </body>
 </html>

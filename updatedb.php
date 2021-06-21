@@ -18,13 +18,13 @@ $name =  $_POST['name'];
 $phone =  $_POST['phone']; 
 $age =  $_POST['age'];
 $address =  $_POST['address'];
-$day =  $_POST['day'];
+$state =  $_POST['state'];
+$district =  $_POST['district'];
 $hospital =  $_POST['hospital'];
-$location =  $_POST['location'];
 
 
-$params = array($name,$phone,$age,$address,$day,$hospital,$location);
-$sql="INSERT INTO register (name, phone, age, address,  day, hospital, location)
+$params = array($name,$phone,$age,$address,$state,$district,$hospital);
+$sql="INSERT INTO register (name, phone, age, address,state,district, hospital)
 VALUES ( ?,?,?,?,?,?,?)";
 
 $stmt = sqlsrv_query($conn, $sql, $params);
