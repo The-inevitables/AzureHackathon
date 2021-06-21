@@ -79,6 +79,14 @@
                                     <span> Feedback System </span>
                                 </a>
                                 </li>
+                                 <li>
+                                    
+                                    <a href="../feedback.php">
+                                    <i class="dripicons-meter"></i>
+                                    <span> Donate Blood! </span>
+                                </a>
+                                     <!--- Link not updated -->
+                                </li>
                                 <li>
                                     
                                     <a href="../updateInfo.php">
