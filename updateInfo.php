@@ -88,19 +88,12 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <input type="text" id="fname" name="fname" placeholder="First Name"  />
+                                       <input type="text" id="name" name="name" placeholder="Full Name"  />
                                        
                                     </div>
                                  </div>
                               </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="text" id="lname" name="lname" placeholder="Last Name"  />
-                                       
-                                    </div>
-                                 </div>
-                              </div>
+                              
 
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
@@ -150,6 +143,14 @@
                                           
                                        
                                        </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="text" id="location" name="location" placeholder="Hospital Location"  />
+                                       
                                     </div>
                                  </div>
                               </div>

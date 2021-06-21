@@ -14,17 +14,17 @@ $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database"
 $serverName = "tcp:lifelineserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-$fname =  $_POST['fname'];
-$lname =  $_POST['lname'];
+$name =  $_POST['name'];
 $phone =  $_POST['phone']; 
 $age =  $_POST['age'];
 $address =  $_POST['address'];
 $day =  $_POST['day'];
 $hospital =  $_POST['hospital'];
+$location =  $_POST['location'];
 
 
-$params = array($fname,$lname,$phone,$age,$address,$day,$hospital);
-$sql="INSERT INTO patientInfo (fname, lname, phone, age, address,  day, hospital)
+$params = array($name,$phone,$age,$address,$day,$hospital,$location);
+$sql="INSERT INTO register (name, phone, age, address,  day, hospital, location)
 VALUES ( ?,?,?,?,?,?,?)";
 
 $stmt = sqlsrv_query($conn, $sql, $params);
