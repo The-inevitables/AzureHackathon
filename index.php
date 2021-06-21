@@ -71,7 +71,7 @@
                         <li><a data-scroll href="#about">About us</a></li>
                         
                         <li><a data-scroll href="#doctors">Hospitals</a></li>
-                        <li><a data-scroll href="login.php">Login</a></li>
+                        <li><a data-scroll href="login.php">AdminLogin</a></li>
 						<li><a data-scroll href="reservation.php">Book Now</a></li>                   
                    
                         <li><a  href="login2.php">Sign in /Sign Up</a></li>
