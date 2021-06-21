@@ -103,7 +103,7 @@
         <div id="detached-sidebar-placeholder"></div>
 
         <!-- ============================================================== -->
-        <!-- Start Page Content here -->
+        <!-- Content inside the Dashboard -->
         <!-- ============================================================== -->
 
     </div>
@@ -254,7 +254,7 @@
                                     <h4 class="header-title mb-3">My full details</h4>
                                     <address class="mb-0 font-14 address-lg">
                                         <h4>
-                                                                                <?php
+                                        <?php
 
                                             try {
                                                 $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
@@ -269,7 +269,7 @@
                                             $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
                                             $serverName = "tcp:lifelineserver.database.windows.net,1433";
                                             $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select name,phone,age,address,hospital from register where id= (select max(id) as id from register)";
+                                            $sql = "select fname,lname,phone,age,address,hospital from patientInfo where id= (select max(id) as id from patientInfo)";
                                             $stmt = sqlsrv_query( $conn, $sql );
                                             if( $stmt === false) {
                                                 die( print_r( sqlsrv_errors(), true) );
@@ -277,7 +277,7 @@
 
                                             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 
-                                                echo 'Name:'.$row['name']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Age:'.$row['age']."<br /><br />".'Address:'.$row['address']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
+                                                echo 'Name : '.$row['fname'].' '.$row['lname']."<br /><br />".'Phone : '.$row['phone']."<br /><br />".'Age : '.$row['age']."<br /><br />".'Address : '.$row['address']."<br /><br />".'Hospital selected : '.$row['hospital']."<br /><br />";
                                             }
 
                                             sqlsrv_free_stmt( $stmt);
@@ -350,7 +350,7 @@
                         <div class="col-lg-8">
                             <div class="card section-customer" data-customer-id="acme">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Lab Report</h4>
+                                    <h4 class="header-title mb-3">My Medical Records</h4>
 
                                     <div id="weavy-files-container"></div>
 
@@ -404,12 +404,26 @@
                     </div>
                     <!-- end row -->
 
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card section-customer" data-customer-id="acme">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-3">Information Hub</h4>
+
+                                    <div id="weavy-files-container"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col --> 
+                    </div>
+                      <!-- end row -->                              
 
                 </div>
                 <!-- container -->
 
             </div>
-            <!-- content -->
+            <!-- end of dashboard content -->
 
             <!-- Footer Start -->
             <footer class="footer">
@@ -420,6 +434,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-right footer-links d-none d-md-block">
+                                <span> 2021 Team Inevitables  </span>
                                 <a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
                                 <a href="javascript: void(0);">Contact Us</a>
@@ -446,17 +461,13 @@
     <div class="rightbar-overlay"></div>
     <!-- /Right-bar -->
 
-<!--     <!-- Containter for Weavy Messenger -->
-    <div id="weavy-messenger-container"></div>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!-- TASK: add weavy javascript library here -->
-    <script src="https://{your-weavy-url}/javascript/weavy.jquery.js" id="weavy-client-script"></script>
+    
 
-    <!-- weavy client script -->
-    <script src="assets/js/weavy.js"></script> -->
+
 
     <!-- third party js -->
     <script src="assets/js/vendor/jsrsasign-all-min.js"></script>
