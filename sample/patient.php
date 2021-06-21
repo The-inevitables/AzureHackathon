@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8" />
     <title>Patient Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -177,7 +178,7 @@
                             <li class="notification-list topbar-dropdown d-lg-block toggle-messenger">
                                 <!-- Connecting with azure health bot -->
                                 <button class="nav-link dropdown-toggle arrow-none btn btn-link">
-                                  <a href="cPzdsTjhnVM.sZ8SN5tZB8YhbaSeuF1Y1E-NBj91Cj7Zo_B0tmGPSYs">  <i class="dripicons-message noti-icon"></i></a>
+                                  <a href="https://lifelinecarebotservice.azurewebsites.net">  <i class="dripicons-message noti-icon"></i></a>
                                 </button>
                                     <!-- Containter for messenger -->
                              </li>
