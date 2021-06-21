@@ -86,6 +86,13 @@
                                     <span> Emergency Assistance </span>
                                 </a><!--- Link not updated -->
                                 </li>
+                                <li>
+                                    
+                                    <a href="../updateInfo.php">
+                                    <i class="dripicons-meter"></i>
+                                    <span> Donate to Charity! </span>
+                                </a><!--- Link not updated -->
+                                </li>
                             </ul>
                         </li>
 
