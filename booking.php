@@ -66,10 +66,43 @@
       <div class="container">
                <div class="col-md-6">
                   <div class="message-box">
-                     <h2>Welcome</h2>
+                     <h2>Thank you!</h2>
                      
-                     <p class="lead">Your appoinment is booked under the booking id<h1> 1001</h2></p>
-                     <p> You can collect the token from the clinic reception by giving the booking id in the reception </p>
+                     <p class="lead"><h3>Your appoinment is booked.</h3>
+                     <h2> Details Provided </h2>
+                     <h3>
+                     <?php
+
+                                            try {
+                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
+                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                            }
+                                            catch (PDOException $e) {
+                                                print("Error connecting to SQL Server.");
+                                                die(print_r($e));
+                                            }
+
+                                            // SQL Server Extension Sample Code:
+                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
+                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
+                                            $sql = "select name,phone,hospital from register where id= (select max(id) as id from register)";
+                                            $stmt = sqlsrv_query( $conn, $sql );
+                                            if( $stmt === false) {
+                                                die( print_r( sqlsrv_errors(), true) );
+                                            }
+
+                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+
+                                                echo 'Name:'.$row['name']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
+                                            }
+
+                                            sqlsrv_free_stmt( $stmt);
+
+                                            ?>
+                                            </h3>
+                     
+                     </p>                     
                      
                      <a href="index.php" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">HOME</a>
                   </div>
