@@ -89,7 +89,7 @@
                   <div class="appointment-form">
                      <h3><span>+</span>Login to patient account</h3>
                      <div class="form">
-                        <form method="post" action="updateInfo.php">
+                        <form method="post" action="sample/patient.php">
                            <fieldset>
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
