@@ -81,7 +81,7 @@
                                 </li>
                                  <li>
                                     
-                                    <a href="../feedback.php">
+                                    <a href="../Bloodbank_registration.php">
                                     <i class="dripicons-meter"></i>
                                     <span> Donate Blood! </span>
                                 </a>
