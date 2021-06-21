@@ -107,7 +107,7 @@
                                     </div>
                                  </div>
                               </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                              <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
                                  <div class="row">
                                     
                                     <div class="form-group">
@@ -123,7 +123,7 @@
                                        </select>
                                     </div>
                                  </div>
-                              </div>
+                              </div> -->
                               <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
