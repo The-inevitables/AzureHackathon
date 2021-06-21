@@ -18,10 +18,10 @@ $name =  $_POST['name'];
 $phone =  $_POST['phone']; 
 $day =  $_POST['day'];
 $hospital =  $_POST['hospital'];
-// $doc_name =  $_POST['docname'];
+
 
 $params = array($name,$phone,$day,$hospital);
-$sql="INSERT INTO reserve (name, phone, day, hospital)
+$sql="INSERT INTO register (name, phone, day, hospital)
 VALUES ( ?,?,?,?)";
 
 $stmt = sqlsrv_query($conn, $sql, $params);
@@ -29,7 +29,19 @@ if ($stmt === false) {
     echo "Row insertion failed.\n";  
     die(print_r(sqlsrv_errors(), true));  
 } else {  
-    header('location: booking.php');  
+    
+    $params = array($name,$phone,$day,$hospital);
+    $sql="INSERT INTO reserve (name, phone, day, hospital)
+    VALUES ( ?,?,?,?)";
+
+    $stmt = sqlsrv_query($conn, $sql, $params);
+    if ($stmt === false) {  
+        echo "Row insertion failed.\n";  
+        die(print_r(sqlsrv_errors(), true));  
+    } else {  
+        
+        header('location: booking.php');  
+    }   
 } 
 
 ?>
