@@ -184,7 +184,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
 
-                                    <!-- azure bot integration-->
+                                    <!-- item-->
                                     <div class="dropdown-item noti-title">
                                         <h5 class="m-0">
                                             <span class="float-right">
@@ -347,8 +347,8 @@
                                     <h4 class="header-title mb-3">My full details</h4>
                                     <address class="mb-0 font-14 address-lg">
                                         <h4>
-                                                                            <address class="mb-0 font-14 address-lg">
-                                        <h4>
+                                            <address class="mb-0 font-14 address-lg">
+                                        <h3>
                                         <?php
 
                                             try {
@@ -378,7 +378,7 @@
                                             sqlsrv_free_stmt( $stmt);
 
                                             ?>
-                                        </h4>
+                                        </h3>
                                 
                                     </address>
                                         </h4>
@@ -400,28 +400,52 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Hospital Information</h4>
+                                    <h4 class="header-title mb-3">Hospital Information</h4><h3>
 
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Department List</span>
-                                               </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Doctor List</span> </p>
-                                            
-                                            
-                                        </li>
-                                    </ul>
+                                    <?php
 
-                                </div>
-                            </div>
+                                            try {
+                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
+                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                            }
+                                            catch (PDOException $e) {
+                                                print("Error connecting to SQL Server.");
+                                                die(print_r($e));
+                                            }
+
+                                            // SQL Server Extension Sample Code:
+                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
+                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
+                                            $sql = "select state,district,hospital,department,doctor from register where id= (select max(id) as id from register)";
+                                            $stmt = sqlsrv_query( $conn, $sql );
+                                            if( $stmt === false) {
+                                                die( print_r( sqlsrv_errors(), true) );
+                                            }
+
+                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+
+                                                echo 'State: '.$row['state']."<br /><br />".'District: '.$row['district']."<br /><br />".'Hospital: '.$row['hospital']."<br /><br />".'Department: '.$row['department']."<br /><br />".'Doctor: '.$row['doctor']."<br /><br />";
+                                            }
+
+                                            sqlsrv_free_stmt( $stmt);
+
+                                            ?>
+                                            </h3>
+                                    </div>
+                                 </div>
+                              
+                            
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="header-title mb-3">Diagonostic Information</h4>
-
+                                    <h3>
                                     <ul class="list-unstyled mb-0">
                                         <li>
+                                        <p class="mb-2"><span class="font-weight-bold mr-2">Info: Mild Chest pain</span>
+                                               </p>
                                             <p class="mb-2"><span class="font-weight-bold mr-2">ECG: OK</span>
                                                </p>
                                             <p class="mb-2"><span class="font-weight-bold mr-2">Blood Pressure: 120/80mmHg</span> </p>
@@ -431,7 +455,7 @@
                                             <p class="mb-0"><span class="font-weight-bold mr-2">Lab Report: To be uploaded after analysis</span></p>
                                         </li>
                                     </ul>
-
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -563,6 +587,7 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="https://cdn.botframework.com/botframework-webchat/master/webchat.js"></script>
+    <script src="../js/selectFilter.min.js"></script>
 
     
 
