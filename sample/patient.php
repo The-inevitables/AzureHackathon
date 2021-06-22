@@ -184,7 +184,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
 
-                                    <!-- item-->
+                                    <!-- azure bot integration-->
                                     <div class="dropdown-item noti-title">
                                         <h5 class="m-0">
                                             <span class="float-right">
