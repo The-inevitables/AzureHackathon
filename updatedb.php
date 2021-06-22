@@ -21,11 +21,13 @@ $address =  $_POST['address'];
 $state =  $_POST['state'];
 $district =  $_POST['district'];
 $hospital =  $_POST['hospital'];
+$department =  $_POST['department'];
+$doctor =  $_POST['doctor'];
 
 
-$params = array($name,$phone,$age,$address,$state,$district,$hospital);
-$sql="INSERT INTO register (name, phone, age, address,state,district, hospital)
-VALUES ( ?,?,?,?,?,?,?)";
+$params = array($name,$phone,$age,$address,$state,$district,$hospital,$department,$doctor);
+$sql="INSERT INTO register (name, phone, age, address,state,district, hospital,department,doctor)
+VALUES ( ?,?,?,?,?,?,?,?,?)";
 
 $stmt = sqlsrv_query($conn, $sql, $params);
 if ($stmt === false) {  

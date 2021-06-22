@@ -154,27 +154,77 @@
                                        
                                     </select>
                                     <!-- <label><br />Hospital</label> -->
-                                       <select  class="thirdList selectFilter" name="hospital">
+                                    <select data-target="forthList" class="thirdList selectFilter" name="hospital">
                                        <option value="-1">Hospitals</option>
-                                          <option data-belong="A">Government Medical college Alapuzha</option>
-                                          <option data-belong="B">Government Medical college Eranakulam</option>
-                                          <option data-belong="C">Government Medical college Idukki</option>
-                                          <option data-belong="D">Government Medical college Kannur</option>
-                                          <option data-belong="E">Government Medical college Kasaragod</option>
-                                          <option data-belong="F">Government Medical college Kottayam</option>
-                                          <option data-belong="G">Government Medical college Kollam</option>
-                                          <option data-belong="H">Government Medical college Kozhikode</option>
-                                          <option data-belong="I">Government Medical college Malappuram</option>
-                                          <option data-belong="J">Government Medical college Palakkad</option>
-                                          <option data-belong="K">Government Medical college Pathanamthitta</option>
-                                          <option data-belong="L">Government Medical college trivandrum</option>
-                                          <option data-belong="M">Government Medical college Thrissur</option>
-                                          <option data-belong="N">Government Medical college Wayanad</option>
-                                          <option data-belong="F">Pushpagiri Medical college Hospital Thiruvalla</option>   
-                                          <option data-belong="F">Mar sleeva Medi city Pala</option> 
-                                          <option data-belong="F">Maryqueens Hospital Kanjirappally </option>  
-                                          <option data-belong="B">Apollo Adlux Hospital Angamaly</option> 
-                                          <option data-belong="B">VPS Lakeshore Hospital Kochi</option>                                  
+                                          <option data-ref="AA" data-belong="A">Government Medical college Alapuzha</option>
+                                          <option data-ref="BB" data-belong="B">Government Medical college Eranakulam</option>
+                                          <option data-ref="CC" data-belong="C">Government Medical college Idukki</option>
+                                          <option data-ref="DD" data-belong="D">Government Medical college Kannur</option>
+                                          <option data-ref="EE" data-belong="E">Government Medical college Kasaragod</option>
+                                          <option data-ref="FF" data-belong="F">Government Medical college Kottayam</option>
+                                          <option data-ref="GG" data-belong="G">Government Medical college Kollam</option>
+                                          <option data-ref="HH" data-belong="H">Government Medical college Kozhikode</option>
+                                          <option data-ref="II" data-belong="I">Government Medical college Malappuram</option>
+                                          <option data-ref="JJ" data-belong="J">Government Medical college Palakkad</option>
+                                          <option data-ref="KK" data-belong="K">Government Medical college Pathanamthitta</option>
+                                          <option data-ref="LL" data-belong="L">Government Medical college trivandrum</option>
+                                          <option data-ref="MM" data-belong="M">Government Medical college Thrissur</option>
+                                          <option data-ref="NN" data-belong="N">Government Medical college Wayanad</option>
+                                          <option data-ref="OO" data-belong="F">Pushpagiri Medical college Hospital Thiruvalla</option>   
+                                          <option data-ref="PP" data-belong="F">Mar sleeva Medi city Pala</option> 
+                                          <option data-ref="QQ" data-belong="F">Maryqueens Hospital Kanjirappally </option>  
+                                          <option data-ref="RR" data-belong="B">Apollo Adlux Hospital Angamaly</option> 
+                                          <option data-ref="SS" data-belong="B">VPS Lakeshore Hospital Kochi</option>                                  
+                                        
+                                       
+                                       </select>
+
+                                       <select data-target="fifthList" class="forthList selectFilter" name="department">
+                                       <option value="-1">Department</option>
+                                          <option data-ref="AAA" data-belong="AA">Cardiology</option>
+                                          <option data-ref="BBB" data-belong="BB">Pulmonology</option>
+                                          <option data-ref="CCC" data-belong="BB">Neurology</option>
+                                          <option data-ref="DDD" data-belong="DD">Orthopedic</option>
+                                          <option data-ref="EEE" data-belong="FF">Cardiology</option>
+                                          <option data-ref="FFF" data-belong="FF">Pulmonology</option>
+                                          <option data-ref="GGG" data-belong="FF">Neurology</option>
+                                          <option data-ref="HHH" data-belong="LL">Cardiology</option>
+                                          <option data-ref="III" data-belong="MM">Pulmonology</option>
+                                          <option data-ref="JJJ" data-belong="NN">Cardiology</option>
+                                          <option data-ref="KKK" data-belong="PP">Neurology</option>
+                                          <option data-ref="LLL" data-belong="OO">Cardiology</option>
+                                          <option data-ref="MMM" data-belong="QQ">Orthopedic</option>
+                                          <option data-ref="NNN" data-belong="RR">Pulmonology</option>
+                                          <option data-ref="OOO" data-belong="SS">Orthopedic</option>   
+                                          <option data-ref="PPP" data-belong="CC">Neurology</option> 
+                                          <option data-ref="QQQ" data-belong="EE">Cardiology </option>  
+                                          <option data-ref="RRR" data-belong="GG">Neurology</option> 
+                                          <option data-ref="SSS" data-belong="II">Orthopedic</option>                                  
+                                        
+                                       
+                                       </select>
+
+                                       <select class="fifthList selectFilter" name="doctor">
+                                       <option value="-1">Doctor</option>
+                                          <option data-belong="AAA">Dr. Rejin Joseph</option>
+                                          <option data-belong="BBB">Dr. Benjamin louis</option>
+                                          <option data-belong="CCC">Dr. Gireesh Nair</option>
+                                          <option data-belong="DDD">Dr. Maneesh K</option>
+                                          <option data-belong="EEE">Dr. Aswathy Iyer</option>
+                                          <option data-belong="FFF">Dr. Ashik Kumar</option>
+                                          <option data-belong="GGG">Dr. John Mathew</option>
+                                          <option data-belong="HHH">Dr. Akash Joseph</option>
+                                          <option data-belong="III">Dr. Raman Kartha</option>
+                                          <option data-belong="JJJ">Dr. Daisy George</option>
+                                          <option data-belong="KKK">Dr. Arathy Prathap</option>
+                                          <option data-belong="LLL">Dr. Nimisha Iqbal</option>
+                                          <option data-belong="MMM">Dr. Anjaly B</option>
+                                          <option data-belong="NNN">Dr. Arya Anil</option>
+                                          <option data-belong="OOO">Dr. Rahul Rajesh</option>   
+                                          <option data-belong="PPP">Dr. Aravind B</option> 
+                                          <option data-belong="QQQ">Dr. Jose John </option>  
+                                          <option data-belong="RRR">Dr. Sujith Kumar</option> 
+                                          <option data-belong="SSS">Dr. Alen Abraham</option>                                  
                                         
                                        
                                        </select>
