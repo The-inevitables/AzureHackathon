@@ -175,14 +175,63 @@
                                 </div>
                             </li>
 
-                            <li class="notification-list topbar-dropdown d-lg-block toggle-messenger">
-                                <!-- Connecting with azure health bot -->
-                                <button class="nav-link dropdown-toggle arrow-none btn btn-link">
-                                  <a href="https://lifelinecarebotservice.azurewebsites.net">  <i class="dripicons-message noti-icon"></i></a>
-                                </button>
-                                    <!-- Containter for messenger -->
-                             </li>
-                            
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#"
+                                    role="button" aria-haspopup="false" aria-expanded="false">
+                                    <!-- <i class="dripicons-bell noti-icon"></i> -->
+                                    <i class="dripicons-message noti-icon"></i>
+                                    <span class="noti-icon-badge"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="m-0">
+                                            <span class="float-right">
+                                                <a href="javascript: void(0);" class="text-dark">
+                                                <div id="webchat" role="main"></div>   
+                                                <script>
+
+                                                (async function() {
+
+                                                    // Note, for the simplicity of this example, we are fetching the DirectLine token here;
+                                                    // however, it is recommended that you create a backend REST API to generate and manage 
+                                                    // your tokens.
+                                                    const res = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', 
+                                                    { 
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Authorization': `Bearer cPzdsTjhnVM.sZ8SN5tZB8YhbaSeuF1Y1E-NBj91Cj7Zo_B0tmGPSYs`,
+                                                        'Content-Type': 'application/json'
+                                                    },
+                                                    body: {
+                                                        // The user id must start with `dl` and should be unique for each user.
+                                                        User: { Id: 'dl_user_id' }
+                                                    }
+                                                    });
+                                                    const { token } = await res.json();
+
+                                                    window.WebChat.renderWebChat({
+                                                    directLine: window.WebChat.createDirectLine({ token }),
+                                                }, document.getElementById('webchat'));
+
+                                                })().catch(err => console.log(err));
+
+                                                </script>
+
+                                                </a>
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div>
+                                                                  
+
+                                </div>
+                                
+                                
+                            </li>
+
+                                                        
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown"
                                     href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -513,6 +562,7 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/master/webchat.js"></script>
 
     
 
