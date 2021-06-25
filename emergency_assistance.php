@@ -72,7 +72,7 @@
    
       <div id="service" class="services wow fadeIn">
       <div class="col-lg-16 col-md-15 col-sm-19 col-xs-15">
-                  <h2>Emergency numbers!</h2>
+                  <h2>Contacts for emergency situations!</h2>
                   <div class="appointment-form">
                      <h3><span></span>Emergency Assistance</h3>
                      <div class="vbox wb_container" id="wb_main" style="height: 5975px;">
