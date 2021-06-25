@@ -90,10 +90,10 @@
                                 </li>
                                 <li>
                                     
-                                    <a href="#">
+                                    <a href="../Emergency_assistance.php">
                                     <i class="dripicons-meter"></i>
                                     <span> Emergency Assistance </span>
-                                </a><!--- Link not updated -->
+                                </a>
                                 </li>
                                 <li>
                                     
