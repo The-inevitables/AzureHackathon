@@ -94,7 +94,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <input type="text" id="name" name="userID" placeholder="Name"  />
+                                       <input type="text" id="name" name="userID" placeholder="Admin UserName"  />
                                        
                                     </div>
                                  </div>
@@ -103,7 +103,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <input type="password" id="name" name="password" placeholder="Phone"  />
+                                       <input type="password" id="name" name="password" placeholder="Password"  />
                                        
                                     </div>
                                  </div>
