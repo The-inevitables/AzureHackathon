@@ -90,14 +90,14 @@
                                 </li>
                                 <li>
                                     
-                                    <a href="../updateInfo.php">
+                                    <a href="#">
                                     <i class="dripicons-meter"></i>
                                     <span> Emergency Assistance </span>
                                 </a><!--- Link not updated -->
                                 </li>
                                 <li>
                                     
-                                    <a href="../updateInfo.php">
+                                    <a href="#">
                                     <i class="dripicons-meter"></i>
                                     <span> Donate to Charity! </span>
                                 </a><!--- Link not updated -->
@@ -520,6 +520,7 @@
                                        
                                        </select><br /><br />
                                         <button type= submit>Make A call</button>
+                                        </form>
                                         </li>
                                     </ul>
                                     </h3>
@@ -536,19 +537,43 @@
 
 
                     <div class="row">
-                        <div class="col-lg-8">
+                        <div class="col-lg-4">
                             <div class="card section-customer" data-customer-id="acme">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">My Medical Records</h4>
+                                    <h4 class="header-title mb-3">Upload Previous Medical Records</h4>
 
-                                    <div id="weavy-files-container"></div>
+                                    <div class="container">
+                                    <div class="row">
+                                        <form action="patient.php" method="post" enctype="multipart/form-data" >
+                                        
+                                        <input type="file" name="myfile"> 
+                                        <button type="submit" name="save">upload</button>
+                                        </form>
+                                    </div>
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
 
-                        <div class="col-lg-4">
+                        
+                        <div class="col-lg-8">
+                            <div class="card section-customer" data-customer-id="acme">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-3">Information Hub</h4>
+
+                                    <img src="../images/covid 2.jpg" width="400" height="400">
+                                    <img src="../images/covid 1.jpg" width="400" height="400">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col --> 
+                    </div>
+                      <!-- end row -->        
+                      <div class="row">
+                        <div class="col-lg-8">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="header-title mb-3">Bill</h4>
@@ -580,8 +605,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3">
-                                        <h1 class="text-overflow m-0"><button>Pay Securely<button></h1>
+                                        <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3"><h3>Pay Securely</h3>
+                                        
                                          </a>
                                     </div>
                                     <!-- end table-responsive -->
@@ -593,20 +618,7 @@
                     </div>
                     <!-- end row -->
 
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="card section-customer" data-customer-id="acme">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-3">Information Hub</h4>
-
-                                    <div id="weavy-files-container"></div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col --> 
-                    </div>
-                      <!-- end row -->                              
+                                         
 
                 </div>
                 <!-- container -->

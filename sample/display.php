@@ -199,7 +199,8 @@
                                             $status = $_POST['status'];
                                             $params = array($status);
 
-                                            $sql = "SELECT  hospital FROM reserve where hospital='$status'";
+                                            $sql = "SELECT DISTINCT hospital FROM reserve where hospital='$status'";
+                                            
                                             $stmt = sqlsrv_query( $conn, $sql );
                                             if( $stmt === false) {
                                                 die( print_r( sqlsrv_errors(), true) );
