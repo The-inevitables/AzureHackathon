@@ -156,25 +156,25 @@
                                     <!-- <label><br />Hospital</label> -->
                                     <select data-target="forthList" class="thirdList selectFilter" name="hospital">
                                        <option value="-1">Hospitals</option>
-                                          <option data-ref="AA" data-belong="A">Government Medical college Alapuzha</option>
-                                          <option data-ref="BB" data-belong="B">Government Medical college Eranakulam</option>
-                                          <option data-ref="CC" data-belong="C">Government Medical college Idukki</option>
-                                          <option data-ref="DD" data-belong="D">Government Medical college Kannur</option>
-                                          <option data-ref="EE" data-belong="E">Government Medical college Kasaragod</option>
-                                          <option data-ref="FF" data-belong="F">Government Medical college Kottayam</option>
-                                          <option data-ref="GG" data-belong="G">Government Medical college Kollam</option>
-                                          <option data-ref="HH" data-belong="H">Government Medical college Kozhikode</option>
-                                          <option data-ref="II" data-belong="I">Government Medical college Malappuram</option>
-                                          <option data-ref="JJ" data-belong="J">Government Medical college Palakkad</option>
-                                          <option data-ref="KK" data-belong="K">Government Medical college Pathanamthitta</option>
-                                          <option data-ref="LL" data-belong="L">Government Medical college trivandrum</option>
-                                          <option data-ref="MM" data-belong="M">Government Medical college Thrissur</option>
-                                          <option data-ref="NN" data-belong="N">Government Medical college Wayanad</option>
-                                          <option data-ref="OO" data-belong="F">Pushpagiri Medical college Hospital Thiruvalla</option>   
-                                          <option data-ref="PP" data-belong="F">Mar sleeva Medi city Pala</option> 
-                                          <option data-ref="QQ" data-belong="F">Maryqueens Hospital Kanjirappally </option>  
-                                          <option data-ref="RR" data-belong="B">Apollo Adlux Hospital Angamaly</option> 
-                                          <option data-ref="SS" data-belong="B">VPS Lakeshore Hospital Kochi</option>                                  
+                                          <option data-ref="AA" data-belong="A">GOVERNMENT T.D. Medical College Hospital, Alappuzha</option>
+                                          <option data-ref="BB" data-belong="B">Government Medical College Eranakulam</option>
+                                          <option data-ref="CC" data-belong="C">Government Medical College Idukki</option>
+                                          <option data-ref="DD" data-belong="D">Government Medical College Kannur</option>
+                                          <option data-ref="EE" data-belong="E">Government Medical College Kasaragod</option>
+                                          <option data-ref="FF" data-belong="F">Government Medical College Hospital, Kottayam</option>
+                                          <option data-ref="GG" data-belong="G">Government Medical College Kollam</option>
+                                          <option data-ref="HH" data-belong="H">Government Medical College Hospital, Kozhikode</option>
+                                          <option data-ref="II" data-belong="I">Government Medical College Hospital, Malappuram</option>
+                                          <option data-ref="JJ" data-belong="J">Government Medical College Hospital, Palakkad</option>
+                                          <option data-ref="KK" data-belong="K">Government Medical College Hospital, Pathanamthitta</option>
+                                          <option data-ref="LL" data-belong="L">Government Medical College Hospital, Trivandrum</option>
+                                          <option data-ref="MM" data-belong="M">Government Medical College Hospital, Thrissur</option>
+                                          <option data-ref="NN" data-belong="N">Government Medical College Hospital, Wayanad</option>
+                                          <option data-ref="FF" data-belong="F">Pushpagiri Medical College Hospital, Thiruvalla</option>   
+                                          <option data-ref="FF" data-belong="F">Mar sleeva Medicity, Pala</option> 
+                                          <option data-ref="FF" data-belong="F">Maryqueens Hospital, Kanjirappally </option>  
+                                          <option data-ref="BB" data-belong="B">Apollo Adlux Hospital, Angamaly</option> 
+                                          <option data-ref="BB" data-belong="B">VPS Lakeshore Hospital, Kochi</option>                         
                                         
                                        
                                        </select>
