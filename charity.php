@@ -72,7 +72,7 @@
    
       <div id="service" class="services wow fadeIn">
       <div class="col-lg-16 col-md-15 col-sm-19 col-xs-15">
-                  <h2>Take part in the charity !Save Lifes</h2>
+                  <h2>Your little contribution can make a big impact on the society!</h2>
                   <div class="appointment-form">
                      <h3><span></span>Charity Donation</h3>
                      <div class="form">
@@ -98,7 +98,7 @@
                               
 							                              
 							  
-							   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
                                        <input type="text" id="email" name="email_id" placeholder="Enter the email id"  />
@@ -112,7 +112,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <div class="center"><button type="submit"> <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3"><h3>Donate Securely</h3></button></div>
+                                       <div class="center"><button type="submit"> <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3"><h3>Donate Securely</h3></a></button></div>
 									   
                                     </div>
                                  </div>
