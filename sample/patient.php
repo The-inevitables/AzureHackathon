@@ -440,19 +440,86 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Diagonostic Information</h4>
+                                    <h4 class="header-title mb-3">Online Medi Assistance</h4>
                                     <h3>
                                     <ul class="list-unstyled mb-0">
                                         <li>
-                                        <p class="mb-2"><span class="font-weight-bold mr-2">Info: Mild Chest pain</span>
-                                               </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">ECG: OK</span>
-                                               </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Blood Pressure: 120/80mmHg</span> </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">X-Ray: No need</span>
-                                              </p>
-                                            <p class="mb-2"><span class="font-weight-bold mr-2">Scan: No need</span> </p>
-                                            <p class="mb-0"><span class="font-weight-bold mr-2">Lab Report: To be uploaded after analysis</span></p>
+                                        
+                                        <select data-target="forthList" class="thirdList selectFilter" name="hospital">
+                                       <option value="-1">Hospitals</option>
+                                          <option data-ref="AA">GOVERNMENT T.D. Medical College</option>
+                                          <option data-ref="BB">Government Medical College Eranakulam</option>
+                                          <option data-ref="CC">Government Medical College Idukki</option>
+                                          <option data-ref="DD">Government Medical College Kannur</option>
+                                          <option data-ref="EE">Government Medical College Kasaragod</option>
+                                          <option data-ref="FF">Government Medical College Kottayam</option>
+                                          <option data-ref="GG">Government Medical College Kollam</option>
+                                          <option data-ref="HH">Government Medical College Kozhikode</option>
+                                          <option data-ref="II">Government Medical College Malappuram</option>
+                                          <option data-ref="JJ">Government Medical College Palakkad</option>
+                                          <option data-ref="KK">Government Medical College Pathanamthitta</option>
+                                          <option data-ref="LL">Government Medical College Trivandrum</option>
+                                          <option data-ref="MM">Government Medical College Thrissur</option>
+                                          <option data-ref="NN">Government Medical College Wayanad</option>
+                                          <option data-ref="FF">Pushpagiri Medical College Thiruvalla</option>   
+                                          <option data-ref="FF">Mar sleeva Medicity, Pala</option> 
+                                          <option data-ref="FF">Maryqueens Hospital, Kanjirappally </option>  
+                                          <option data-ref="BB">Apollo Adlux Hospital, Angamaly</option> 
+                                          <option data-ref="BB">VPS Lakeshore Hospital, Kochi</option>                         
+                                        
+                                       
+                                       </select><br />
+
+                                       <select data-target="fifthList" class="forthList selectFilter" name="department">
+                                       <option value="-1">Department</option>
+                                          <option data-ref="AAA" data-belong="AA">Cardiology</option>
+                                          <option data-ref="BBB" data-belong="BB">Pulmonology</option>
+                                          <option data-ref="CCC" data-belong="BB">Neurology</option>
+                                          <option data-ref="DDD" data-belong="DD">Orthopedic</option>
+                                          <option data-ref="EEE" data-belong="FF">Cardiology</option>
+                                          <option data-ref="FFF" data-belong="FF">Pulmonology</option>
+                                          <option data-ref="GGG" data-belong="FF">Neurology</option>
+                                          <option data-ref="HHH" data-belong="LL">Cardiology</option>
+                                          <option data-ref="III" data-belong="MM">Pulmonology</option>
+                                          <option data-ref="JJJ" data-belong="NN">Cardiology</option>
+                                          <option data-ref="KKK" data-belong="PP">Neurology</option>
+                                          <option data-ref="LLL" data-belong="OO">Cardiology</option>
+                                          <option data-ref="MMM" data-belong="QQ">Orthopedic</option>
+                                          <option data-ref="NNN" data-belong="RR">Pulmonology</option>
+                                          <option data-ref="OOO" data-belong="SS">Orthopedic</option>   
+                                          <option data-ref="PPP" data-belong="CC">Neurology</option> 
+                                          <option data-ref="QQQ" data-belong="EE">Cardiology </option>  
+                                          <option data-ref="RRR" data-belong="GG">Neurology</option> 
+                                          <option data-ref="SSS" data-belong="II">Orthopedic</option>                                  
+                                        
+                                       
+                                       </select><br />
+                                       <form method="post" action="demo.php">
+                                       <select class="fifthList selectFilter" name="doctor">
+                                       <option value="-1">Doctor</option>
+                                          <option data-belong="AAA">Dr. Rejin Joseph</option>
+                                          <option data-belong="BBB">Dr. Benjamin louis</option>
+                                          <option data-belong="CCC">Dr. Gireesh Nair</option>
+                                          <option data-belong="DDD">Dr. Maneesh K</option>
+                                          <option data-belong="EEE">Dr. Aswathy Iyer</option>
+                                          <option data-belong="FFF">Dr. Ashik Kumar</option>
+                                          <option data-belong="GGG">Dr. John Mathew</option>
+                                          <option data-belong="HHH">Dr. Akash Joseph</option>
+                                          <option data-belong="III">Dr. Raman Kartha</option>
+                                          <option data-belong="JJJ">Dr. Daisy George</option>
+                                          <option data-belong="KKK">Dr. Arathy Prathap</option>
+                                          <option data-belong="LLL">Dr. Nimisha Iqbal</option>
+                                          <option data-belong="MMM">Dr. Anjaly B</option>
+                                          <option data-belong="NNN">Dr. Arya Anil</option>
+                                          <option data-belong="OOO">Dr. Rahul Rajesh</option>   
+                                          <option data-belong="PPP">Dr. Aravind B</option> 
+                                          <option data-belong="QQQ">Dr. Jose John </option>  
+                                          <option data-belong="RRR">Dr. Sujith Kumar</option> 
+                                          <option data-belong="SSS">Dr. Alen Abraham</option>                                  
+                                        
+                                       
+                                       </select><br /><br />
+                                        <button type= submit>Make A call</button>
                                         </li>
                                     </ul>
                                     </h3>
