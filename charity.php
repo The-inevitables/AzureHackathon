@@ -112,7 +112,7 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <div class="center"><button type="submit"> <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3"><h3>Donate Securely</h3></a></button></div>
+                                       <div class="center"><button>  <a href="https://www.instamojo.com/@akhilmanil0" class=" header-title mb-3"><h3>Donate Securely</h3></a></button></div>
 									   
                                     </div>
                                  </div>
