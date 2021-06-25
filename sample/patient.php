@@ -97,10 +97,10 @@
                                 </li>
                                 <li>
                                     
-                                    <a href="#">
+                                    <a href="../charity.php">
                                     <i class="dripicons-meter"></i>
                                     <span> Donate to Charity! </span>
-                                </a><!--- Link not updated -->
+                                </a>
                                 </li>
                             </ul>
                         </li>
