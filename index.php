@@ -519,7 +519,7 @@
             <div class="row">
                <div class="col-md-8">
                   <div class="footer-text">
-                     <p>© 2020 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</p>
+                     <p>© 2021 LifeLine. Developed by Team INEVITABLES. All Rights Reserved.</p>
                   </div>
                </div>
                <div class="col-md-4">
