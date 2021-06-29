@@ -57,7 +57,7 @@
                   <div id="navbar" class="navbar-collapse collapse">
                      <ul class="nav navbar-nav">
                         <li><a class="active" href="index.php">Return to Home</a></li>
-                    
+			<!-- Return to home link -->
                      </ul>
                   </div>
                <div class=col-4>
@@ -65,10 +65,7 @@
                </nav>
               
             </div>
-         </div>
-
-         
-      
+         </div>       
    
       <div id="service" class="services wow fadeIn">
       <div class="col-lg-16 col-md-15 col-sm-19 col-xs-15">
@@ -95,8 +92,7 @@
                                     </div>
                                  </div>
                               </div>
-                              
-							   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
                                        <input type="number_format" id="phone" name="password" placeholder="Phone Number"  />
@@ -104,7 +100,7 @@
                                     </div>
                                  </div>
                               </div>
-							   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
                                        <input type="text" id="group" name="bloodGroup" placeholder="Blood Group"  />
@@ -112,9 +108,7 @@
                                     </div>
                                  </div>
                               </div>
-                              
-							  
-							   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
                                        <input type="text" id="location" name="locations" placeholder="Enter the location"  />
@@ -122,9 +116,6 @@
                                     </div>
                                  </div>
                               </div>
-                              
-                              
-                              
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
@@ -140,24 +131,7 @@
                   </div>
                </div>
 
-              
-                  
-               
-
-
-
-
-
-
-
-
-
-
-
-
-    
-	  
-	
+                             
       <!-- end copyrights -->
       <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
       <!-- all js files -->
