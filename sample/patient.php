@@ -21,7 +21,7 @@
     <!-- App css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="main-style-container" />
-    <link href="assets/css/weavy.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="loading">
@@ -130,7 +130,7 @@
             <div class="content">
 
                 <div id="vertical-topbar-placeholder">
-                    <!-- Topbar Start -->
+<!-- Topbar Start -->
                     <div class="navbar-custom">
                         <ul class="list-unstyled topbar-right-menu float-right mb-0">
                             <li class="notification-list topbar-dropdown d-lg-block">
@@ -184,7 +184,10 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
 
-                                    <!-- item-->
+<!-- Chat Bot (Azure Health Bot) Integreted Within Patient Dashboard -->
+                                    
+                    <!-- code beginning for chat bot -->
+
                                     <div class="dropdown-item noti-title">
                                         <h5 class="m-0">
                                             <span class="float-right">
@@ -194,9 +197,9 @@
 
                                                 (async function() {
 
-                                                    // Note, for the simplicity of this example, we are fetching the DirectLine token here;
-                                                    // however, it is recommended that you create a backend REST API to generate and manage 
-                                                    // your tokens.
+                //  Note, for the simplicity of this example, we are fetching the DirectLine token here;
+                //  however, it is recommended that you create a backend REST API to generate and manage 
+                //  your tokens.
                                                     const res = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', 
                                                     { 
                                                     method: 'POST',
@@ -224,6 +227,8 @@
                                         </h5>
                                     </div>
                                     <div>
+
+                <!-- code end for chat bot -->
                                                                   
 
                                 </div>
@@ -241,35 +246,17 @@
                                     </span>
                                     <span>
                                         <span class="account-user-name">
+
+<!-- UserDetails PHP code which is added in the queries folder -->
+
                                             <?php
 
-                                            try {
-                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
-                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                            }
-                                            catch (PDOException $e) {
-                                                print("Error connecting to SQL Server.");
-                                                die(print_r($e));
-                                            }
-
-                                            // SQL Server Extension Sample Code:
-                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
-                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select name,phone from register where id= (select max(id) as id from register)";
-                                            $stmt = sqlsrv_query( $conn, $sql );
-                                            if( $stmt === false) {
-                                                die( print_r( sqlsrv_errors(), true) );
-                                            }
-
-                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-
-                                                echo $row['name']."<br />".$row['phone']."<br />";
-                                            }
-
-                                            sqlsrv_free_stmt( $stmt);
+                                            include "../queries/user.php";
 
                                             ?>
+<!-- UserDetails block end -->
+
+
                                     </span>
                                 </a>
                                 <div
@@ -315,15 +302,15 @@
                         </button>
                         
                     </div>
-                    <!-- end Topbar -->
+<!-- end Topbar -->
 
                 </div>
                 <div id="horizontal-topbar-placeholder"></div>
 
-                <!-- Start Content-->
+<!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
+    <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box">
@@ -337,7 +324,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
+    <!-- end page title -->
 
 
                     <div class="row">
@@ -349,48 +336,23 @@
                                         <h4>
                                             <address class="mb-0 font-14 address-lg">
                                         <h3>
+
+<!-- Full Details PHP code which is added in the queries folder -->
+
                                         <?php
 
-                                            try {
-                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
-                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                            }
-                                            catch (PDOException $e) {
-                                                print("Error connecting to SQL Server.");
-                                                die(print_r($e));
-                                            }
+                                                include "../queries/fulldetails.php";
 
-                                            // SQL Server Extension Sample Code:
-                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
-                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select name,phone,age,address,hospital from register where id= (select max(id) as id from register)";
-                                            $stmt = sqlsrv_query( $conn, $sql );
-                                            if( $stmt === false) {
-                                                die( print_r( sqlsrv_errors(), true) );
-                                            }
+                                        ?>
 
-                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+<!-- Full details PHP code end -->
 
-                                                echo 'Name:'.$row['name']."<br /><br />".'Phone:'.$row['phone']."<br /><br />".'Age:'.$row['age']."<br /><br />".'Address:'.$row['address']."<br /><br />".'Hospital:'.$row['hospital']."<br /><br />";
-                                            }
-
-                                            sqlsrv_free_stmt( $stmt);
-
-                                            ?>
                                         </h3>
                                 
                                     </address>
                                         </h4>
-
-
-                                        <!-- <br>Information: Chest Pain</br>
-                                        <br>Diagonostic: CPR, Injection and move the patient to observation room.</br>
-                                        <br>Initial Test done: ECG, Blood Pressure, Prescribed for lab test.</br> -->
                                 
-                                    </address>
-
-                                    
+                                                                      
 
                                 </div>
                             </div>
@@ -402,35 +364,15 @@
                                 <div class="card-body">
                                     <h4 class="header-title mb-3">Hospital Information</h4><h3>
 
+<!-- Hospital Details PHP code which is added in the queries folder -->
+
                                     <?php
 
-                                            try {
-                                                $conn = new PDO("sqlsrv:server = tcp:lifelineserver.database.windows.net,1433; Database = lifelinesqldb", "akhil", "Inevitables@123");
-                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                            }
-                                            catch (PDOException $e) {
-                                                print("Error connecting to SQL Server.");
-                                                die(print_r($e));
-                                            }
+                                    include "../queries/hospitaldetails.php";        
 
-                                            // SQL Server Extension Sample Code:
-                                            $connectionInfo = array("UID" => "akhil", "pwd" => "Inevitables@123", "Database" => "lifelinesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-                                            $serverName = "tcp:lifelineserver.database.windows.net,1433";
-                                            $conn = sqlsrv_connect($serverName, $connectionInfo);
-                                            $sql = "select state,district,hospital,department,doctor from register where id= (select max(id) as id from register)";
-                                            $stmt = sqlsrv_query( $conn, $sql );
-                                            if( $stmt === false) {
-                                                die( print_r( sqlsrv_errors(), true) );
-                                            }
+                                    ?>
+<!-- Hospital details PHP code end -->
 
-                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-
-                                                echo 'State: '.$row['state']."<br /><br />".'District: '.$row['district']."<br /><br />".'Hospital: '.$row['hospital']."<br /><br />".'Department: '.$row['department']."<br /><br />".'Doctor: '.$row['doctor']."<br /><br />";
-                                            }
-
-                                            sqlsrv_free_stmt( $stmt);
-
-                                            ?>
                                             </h3>
                                     </div>
                                  </div>
@@ -494,7 +436,7 @@
                                         
                                        
                                        </select><br />
-                                       <form method="post" action="demo.php">
+                                       <form method="post" action="mediassistance.php">
                                        <select class="fifthList selectFilter" name="doctor">
                                        <option value="-1">Doctor</option>
                                           <option data-belong="AAA">Dr. Rejin Joseph</option>
@@ -535,6 +477,7 @@
                     </div>
                     <!-- end row -->
 
+<!-- Upload Previous Medical Records HTML code beginning -->
 
                     <div class="row">
                         <div class="col-lg-4">
@@ -555,9 +498,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end col -->
+<!-- Upload Previous Medical Records HTML code end -->
 
-                        
+<!-- Information hub HTML code beginning  -->
+
                         <div class="col-lg-8">
                             <div class="card section-customer" data-customer-id="acme">
                                 <div class="card-body">
@@ -569,9 +513,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end col --> 
+
+<!-- Information hub HTML code end -->
+
                     </div>
-                      <!-- end row -->        
+
+<!-- Bill Payemnt HTML code beginning   -->
+
                       <div class="row">
                         <div class="col-lg-8">
                             <div class="card">
@@ -616,7 +564,8 @@
                         </div>
                         <!-- end col -->
                     </div>
-                    <!-- end row -->
+
+<!-- Bill Payemnt HTML code end -->
 
                                          
 

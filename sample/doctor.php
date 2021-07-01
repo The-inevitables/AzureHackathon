@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <script src="assets/js/weavysdk.js" id="weavy-client-script"></script>
-      <script>var weavy = new Weavy();</script> -->
+
 <head>
     <meta charset="utf-8" />
     <title>Dashboard</title>
@@ -27,7 +26,7 @@
     <!-- App css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="main-style-container" />
-    <link href="assets/css/weavy.css" rel="stylesheet" type="text/css" />
+    
     
 </head>
 
@@ -97,7 +96,7 @@
             <div class="content">
 
                 <div id="vertical-topbar-placeholder">
-                    <!-- Topbar Start -->
+<!-- Topbar Start -->
                     <div class="navbar-custom">
                         <ul class="list-unstyled topbar-right-menu float-right mb-0">
                             <li class="notification-list topbar-dropdown d-lg-block">
@@ -181,11 +180,7 @@
                                 <button class="nav-link dropdown-toggle arrow-none btn btn-link">
                                     <i class="dripicons-message noti-icon"></i>
                                 </button>
-                                    <!-- Containter for messenger -->
-                                <div id="weavy-messenger-container">                                
-    
-                                   
-                                </div>
+
                             </li>
                             
                             <li class="dropdown notification-list">
@@ -258,12 +253,12 @@
                             </form>
                         </div>
                     </div>
-                    <!-- end Topbar -->
+<!-- end Topbar -->
 
                 </div>
                 <div id="horizontal-topbar-placeholder"></div>
 
-                <!-- Start Content-->
+<!-- Start Content-->
                 <div class="container-fluid">
 
                     <!-- start page title -->
@@ -281,8 +276,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
+<!-- end page title -->
 
+<!-- Reservation Status HTML block beginning -->
 
                     <div class="row">
                         <div class="col-lg-4">
@@ -301,29 +297,21 @@
 
                                    
                                     </h3> 
-                                    <h4>                                
+                                    <h4> 
+
+                <!-- Reservation Status PHP code which is added in the queries folder -->
+
                                     <?php
-                                         include "../db.php";
+                                         
+                                         include "../queries/reservationstatus.php";                                            
 
-                                            $sql = "SELECT id, name, hospital FROM reserve";
-                                            $stmt = sqlsrv_query( $conn, $sql );
-                                            if( $stmt === false) {
-                                                die( print_r( sqlsrv_errors(), true) );
-                                            }
+                                    ?>
 
-                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-                                                                 
-                                                echo "<tr><td>"."A".$row['id']."</td><td>".$row['name']."</td><td>".$row['hospital']."</td></tr>";                                               
-                                               
+                <!-- Reservation Status Block End -->
 
-                                            }
-
-                                            sqlsrv_free_stmt( $stmt);
-
-                                            ?>
-                                            </h4>
-                                            </table> 
-                                            </div>
+                                        </h4>
+                                        </table> 
+                                        </div>
                                         
                                     </address>
 
@@ -332,7 +320,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end col -->
+
+<!-- Reservation Status HTML block ending -->
+
+<!-- Impatient Status HTML block beginning -->
 
                         <div class="col-lg-4">
                             <div class="card">
@@ -353,7 +344,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end col -->
+
+<!-- Impatient Status HTML block ending -->
+
+<!-- No. of pateints HTML block beginning -->
 
                         <div class="col-lg-4">
                             <div class="card">
@@ -366,23 +360,17 @@
                                         <p>
                                             <i class="mdi mdi-square text-primary"></i> Out Patient
                                             <span class="float-right">
+
+                                <!-- Count PHP code which is added in the queries folder -->
+
                                             <?php
 
-                                            include "../db.php";
-
-                                            $sql = "SELECT count(id) as total FROM reserve";
-                                            $stmt = sqlsrv_query( $conn, $sql );
-                                            if( $stmt === false) {
-                                                die( print_r( sqlsrv_errors(), true) );
-                                            }
-
-                                            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-                                                echo $row['total']."<br />";
-                                            }
-
-                                            sqlsrv_free_stmt( $stmt);
+                                            include "../queries/count.php";                                            
 
                                             ?>
+
+                                <!-- Count Block end -->
+                                
                                             </span>
                                         </p>
                                         <p>
@@ -392,14 +380,17 @@
                                         
                                     </div>
                                 </div>
-                                <!-- end card-body-->
+                                
                             </div>
-                            <!-- end card-->
+                            
                         </div>
                         <!-- end col-->
 
                     </div>
-                    <!-- end row -->
+                   
+<!-- No. of pateints HTML block ending -->
+
+<!-- Hospital Status HTML block beginning -->
                    
                    <div class="row">
                         <div class="col-lg-8">
@@ -410,24 +401,16 @@
                                         <div>
                                             <select name= "status">
                                             <option value="-1">Hospital</option>
+
+                            <!-- Fetching Hospital name PHP code which is added in the queries folder -->
+
                                                 <?php
-                                                include "../db.php";
+                                                include "../queries/hospitalname.php";
 
-                                                    $sql = "SELECT name FROM hospital";
-                                                    $stmt = sqlsrv_query( $conn, $sql );
-                                                    if( $stmt === false) {
-                                                        die( print_r( sqlsrv_errors(), true) );
-                                                    }
-
-                                                    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-                                                                        
-                                                        echo "<option>".$row['name']."</option>";                                              
                                                     
-                                                    }
 
-                                                    sqlsrv_free_stmt( $stmt);
-
-                                                ?>                                            
+                                                ?>
+                            <!-- Hospital name block end -->
 
                                             </select>                                           
 
@@ -443,18 +426,16 @@
                         <!-- end col -->
 
                         
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->
+<!-- Hospital Status HTML block ending -->
+                    </div>                   
 
 
                 </div>
-                <!-- container -->
-
+              
             </div>
             <!-- content -->
 
-            <!-- Footer Start -->
+<!-- Footer Start -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -471,7 +452,7 @@
                     </div>
                 </div>
             </footer>
-            <!-- end Footer -->
+<!-- end Footer -->
 
         </div>
 
@@ -489,18 +470,10 @@
     <div class="rightbar-overlay"></div>
     <!-- /Right-bar -->
 
-    <!-- Containter for Weavy Messenger -->
-    <div id="weavy-messenger-container"></div>
+    
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
-    <!-- TASK: add weavy javascript library here -->
-    <script src="assets/js/weavy.js" id="weavy-client-script"></script>
-
-    <!-- weavy client script -->
-    <script src="assets/js/weavysdk.js"></script>
-    <script>var weavy = new Weavy();</script>
 
     <!-- third party js -->
     <script src="assets/js/vendor/jsrsasign-all-min.js"></script>
